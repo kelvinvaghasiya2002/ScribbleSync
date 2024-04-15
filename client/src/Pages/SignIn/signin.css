@@ -1,0 +1,275 @@
+.signIn-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.signIn-container p,
+label,
+input {
+    font-family: "Roboto", sans-serif !important;
+}
+
+#signin-form {
+    width: 25vw;
+}
+
+#signin-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.login-heading {
+    margin-bottom: 3vh;
+}
+
+.login-heading h1 {
+    font-family: "Bellefair", serif;
+    text-align: center;
+}
+
+
+
+
+
+
+/*--------------  styling for Signing with google button --------------- */
+
+
+.signin-with-google button {
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    gap: 4vw;
+    width: 24vw;
+    background-color: #d8d4c8;
+    border: 0.15vw solid #2d3142;
+    border-radius: 0.55vw;
+    padding-left: 1vw;
+    cursor: pointer;
+}
+
+
+.signin-with-google button p {
+    font-weight: 400;
+    letter-spacing: 0.001vw;
+    color: #2d3142;
+}
+
+
+
+.signin-with-google button img {
+    height: 50%;
+}
+
+
+
+
+
+/* -------------- OR ------------------- */
+
+
+
+.continue-with {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0;
+    width: 100%;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #2d3142;
+    opacity: 0.3;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .75em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .75em;
+}
+
+
+
+
+
+/* ------------ INPUT FEILDS AND LABELS -------------- */
+
+
+
+
+
+
+.form-signin-inputs label {
+    font-size: 1.1vw;
+    color: #2d3142;
+    font-weight: 400;
+    letter-spacing: -0.01vw;
+}
+
+
+
+
+.form-signin-inputs input {
+    height: 6.5vh;
+    border: none;
+    width: 22vw;
+    margin: 2vh 0;
+    background-color: #d8d4c8;
+    border: 0.15vw solid #2d3142;
+    border-radius: 0.55vw;
+    padding: 0 1vw;
+}
+
+
+
+.form-signin-inputs input:focus {
+    outline-style: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.form-signin-inputs input::placeholder {
+    opacity: 0.4;
+}
+
+
+
+
+
+
+
+/* ------------- SIGN IN BUTTON -------------- */
+
+
+
+
+
+.signin-button button {
+    height: 7vh;
+    width: 24vw;
+    margin: 2vh 0;
+    background-color: #2d3142;
+    border: none;
+    border-radius: 0.55vw;
+    color: #d8d4c8;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+
+
+
+.dont-have-an-accnt {
+    margin-top: 2vh;
+}
+
+
+
+.dont-have-an-accnt p{
+    font-weight: 400;
+    /* font-size: 1.1vw; */
+}
+
+
+
+.dont-have-an-accnt p a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    #signin-form {
+        width: 85vw;
+    }
+
+
+    /* --------------- sign in with google button ------------- */
+
+
+
+
+
+    .signin-with-google button {
+        width: 85vw;
+        border: 0.5vw solid #2d3142;
+        border-radius: 2.5vw;
+        padding-left: 5vw;
+        gap: 9vw;
+    }
+
+
+
+
+    /* --------------- OR ----------------- */
+
+
+
+
+
+    .separator {
+        width: 100%;
+    }
+
+
+
+
+
+    /* -------------- INPUT FIELS AND LABELS -------------- */
+
+
+
+
+    .form-signin-inputs input {
+        width: 80vw;
+        border-radius: 2.5vw;
+        border: 0.5vw solid #2d3142;
+        padding: 0 2vw;
+    }
+
+    .form-signin-inputs label {
+        font-size: 3.5vw;
+    }
+
+
+
+
+    /* ---------------------   SIGNIN BUTTON ------------------ */
+
+
+
+    .signin-button button {
+        width: 85vw;
+        border-radius: 2.5vw;
+    }
+
+
+}

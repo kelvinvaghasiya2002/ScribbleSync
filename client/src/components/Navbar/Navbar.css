@@ -1,0 +1,179 @@
+.navbar-container {
+    height: 13vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #b5ad97;
+    padding: 0 3vw;
+}
+
+
+.navbar-container div {
+    align-self: center;
+}
+
+.navbar-container a {
+    color: #2d3142;
+    text-decoration: none;
+}
+
+
+.sign-up-button {
+    height: 7vh;
+    width: 9vw;
+    border-radius: 99px;
+    border: none;
+    background-color: #2d3142;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+.sign-up-button a {
+    color: #d8d4c8;
+    font-size: 1.1vw;
+}
+
+
+.H1 h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+
+
+/* ---------------------  styling for hamburger manu --------------------- */
+
+
+.navbar-menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+
+.hamburger-menu {
+    background-color: #d8d4c8;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    position: fixed;
+    top: 10vh;
+    left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    padding: 4vh 5vw;
+}
+
+
+
+.hamburger-menu div:nth-child(1),
+.hamburger-menu div:nth-child(2) {
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+/* --------------------------- styling for navbar items --------------------- */
+
+
+
+.nav-items {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3vw;
+    width: 30vw;
+}
+
+
+.nav-items div {
+    align-self: center;
+    cursor: pointer;
+}
+
+
+.account-icon {
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------   MEDIA QUERIES  ------------------------------- */
+
+
+@media screen and (max-width: 400px) {
+    .hamburger-menu {
+        width: 50vw;
+    }
+}
+
+
+@media screen and (min-width : 401px) and (max-width: 768px) {
+    .hamburger-menu {
+        width: 30vw;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        height: 10vh;
+        justify-content: space-between;
+    }
+
+    .navbar-menu-icon {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-items div:nth-child(1),
+    .nav-items div:nth-child(2) {
+        display: none;
+    }
+
+    
+
+    .nav-items {
+        justify-content: center;
+        width: 10vw;
+        /* display: none; */
+    }
+
+    .account-icon {
+        transform: scale(1.3);
+    }
+}
