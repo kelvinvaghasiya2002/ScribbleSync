@@ -17,7 +17,7 @@ app.use(authRouter);
 app.use(otpRouter);
 
 app.get("/",(req,res)=>{
-    res.send("<h1>Hello World</h1>")
+    res.send("<h1>learnt deployment today! All thanks to Dishant😉</h1>")
 })
 
 
