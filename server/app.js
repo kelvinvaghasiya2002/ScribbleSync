@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 app.use(authRouter);
 app.use(otpRouter);
 
+app.get("/",(req,res)=>{
+    res.send("<h1>Hello World</h1>")
+})
+
 
 
 
