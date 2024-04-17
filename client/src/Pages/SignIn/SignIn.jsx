@@ -27,7 +27,7 @@ function SignIn() {
 
           <div className='parent-username-field form-signin-inputs'>
             <div>
-              <label htmlFor='username'>Username</label>
+              <label htmlFor='username'>Email</label>
             </div>
             <div>
               <input

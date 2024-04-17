@@ -25,15 +25,13 @@ export default function Hamburger({ hamburgerClick, sethamburgerClick }) {
     })
 
     return <>
-        <div ref={menuRef} className="hamburger-menu" style={!hamburgerClick ? { display: "none" } : null}>
+        <div ref={menuRef} className={!hamburgerClick ? 'close-hamburger-menu slide-out-blurred-left' : 'hamburger-menu scale-in-hor-left'}>
             <div>
                 {
                     loggedIn ?
                         <>
-
                             <div style={{ width: "20vw" }}><EventNoteIcon /></div>
                             <div><Link><p>Calendar</p></Link></div>
-
                         </> :
                         <>
 

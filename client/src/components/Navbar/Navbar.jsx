@@ -9,11 +9,12 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     const [hamburgerClick, sethamburgerClick] = useState(false);
     let { loggedIn } = useUserInfo();
+    console.log(hamburgerClick);
     // loggedIn=true;
-    console.log(loggedIn);
+    // console.log(loggedIn);
 
     let handleHamburgerClick = (e) => {
-        sethamburgerClick(true)
+        sethamburgerClick(!hamburgerClick)
     }
     return (
         <>
