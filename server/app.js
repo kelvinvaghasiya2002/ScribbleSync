@@ -17,7 +17,9 @@ app.use(authRouter);
 app.use(otpRouter);
 
 app.get("/",(req,res)=>{
-    res.send("<h1>learnt deployment today! All thanks to Dishant😉</h1>")
+    res.json({
+        success : "This site has been successfully deployed on render!"
+    })
 })
 
 

@@ -10,7 +10,7 @@ export const verifyOtp = (req,res)=>{
         console.log(response);
         if(!response){
             res.status(400).json({
-                error : "otp is expired!!!!!"
+                error : "otp is expired!"
             })
         }else{
             if(response.otp === otp){
