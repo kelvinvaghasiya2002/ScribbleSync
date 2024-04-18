@@ -6,6 +6,7 @@ import 'dotenv/config'
 
 export const getOtp = (req, res) => {
     const {email} = req.headers;
+    // console.log(email);
     const otp = otpGen.generate(6, { upperCaseAlphabets: false, specialChars: false, lowerCaseAlphabets: false });
     const newOtp = new Otp({
         otp, email
@@ -52,8 +53,9 @@ export const getOtp = (req, res) => {
             console.log(error);
         })
     }).catch((error) => {
+        console.log(error);
         res.status(500).json({
-            error: "Internel server error"
+            error: "Internel server error-1"
         })
     });
 

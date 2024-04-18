@@ -1,13 +1,10 @@
-import { response } from "express";
 import { Otp } from "../../models/otp.js";
 
 
 
 export const verifyOtp = (req,res)=>{
     const {otp , email} = req.headers;
-    
     Otp.findOne({email : email}).then((response)=>{
-        console.log(response);
         if(!response){
             res.status(400).json({
                 error : "otp is expired!!"

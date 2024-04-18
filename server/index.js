@@ -4,6 +4,9 @@ const app = express();
 import 'dotenv/config'
 import  authRouter  from "./routes/Auth/auth.js";
 import otpRouter from "./routes/Otp/otp.route.js"
+import cors from "cors";
+
+app.use(cors());
 
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
