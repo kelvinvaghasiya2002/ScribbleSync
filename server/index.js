@@ -18,7 +18,7 @@ app.use(otpRouter);
 
 app.get("/",(req,res)=>{
     res.json({
-        success : "This site has been successfully deployed on render!"
+        success : "This site has been successfully deployed on vercel!"
     })
 })
 
