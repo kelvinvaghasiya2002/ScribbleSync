@@ -15,10 +15,10 @@ export function useUserInfo() {
 
 export default function UserProvider(props) {
     const [loggedIn , setloggedIn] = useState(false);
-    const [user , setUser] = useState({});
+    const [ContextUser , setContextUser] = useState({});
 
     return (
-        <userContext.Provider value={{setUser , user , setloggedIn , loggedIn}}>
+        <userContext.Provider value={{setContextUser , ContextUser , setloggedIn , loggedIn}}>
             {props.children}
         </userContext.Provider>
     )

@@ -2,26 +2,53 @@ import express from "express";
 import mongoose from "mongoose";
 const app = express();
 import 'dotenv/config'
-import  authRouter  from "./routes/Auth/auth.js";
+import authRouter from "./routes/Auth/auth.js";
 import otpRouter from "./routes/Otp/otp.route.js"
 import cors from "cors";
+import "./controllers/passportAuth/passportStrategy.js"
+import passport from "passport";
+import session from "express-session";
+import passportRouters from "./routes/Auth/passportRoutes.js"
+const client = process.env.CLIENT_URL;
 
-app.use(cors());
 
 
-mongoose.connect(process.env.MONGO_URL).then(()=>{
+app.use(cors(
+    {
+        origin : [`${client}`],
+        credentials : true
+    }
+));
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 1000 * 60 * 3600 
+    }
+}))
+
+
+
+
+mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log("Database Connected");
-}).catch((error)=>{
+}).catch((error) => {
     console.log(error);
 })
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.use(authRouter);
 app.use(otpRouter);
+app.use(passportRouters);
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.json({
-        success : "This site has been successfully deployed on vercel!"
+        success: "This site has been successfully deployed on vercel!"
     })
 })
 
@@ -29,6 +56,6 @@ app.get("/",(req,res)=>{
 
 
 
-app.listen(3000 , ()=>{
+app.listen(3000, () => {
     console.log("server is on 3000");
 })

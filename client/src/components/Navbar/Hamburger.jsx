@@ -55,13 +55,14 @@ export default function Hamburger({ hamburgerClick, sethamburgerClick }) {
                         </>
                 }
             </div>
-            {
-                loggedIn &&
-                <>
-                    <div><hr /></div>
-                    <div><p>Sign Out</p></div>
-                </>
-            }
+            <div>
+                {
+                    loggedIn &&
+                    <>
+                        <div><p>Sign Out</p></div>
+                    </>
+                }
+            </div>
         </div>
     </>
 }

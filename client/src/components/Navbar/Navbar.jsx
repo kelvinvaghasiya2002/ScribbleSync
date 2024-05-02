@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     const [hamburgerClick, sethamburgerClick] = useState(false);
     let { loggedIn } = useUserInfo();
-    console.log(hamburgerClick);
-    // loggedIn=true;
+
     // console.log(loggedIn);
 
     let handleHamburgerClick = (e) => {
@@ -18,7 +17,7 @@ export default function Navbar() {
     }
     return (
         <>
-            <div className="navbar-container">
+            <section className="navbar-container">
                 <div onClick={handleHamburgerClick} className="navbar-menu-icon">
                     <MenuIcon className="menu-icon" />
                 </div>
@@ -26,14 +25,14 @@ export default function Navbar() {
                 <div className="nav-items">
                     <div>
                         {
-                            loggedIn ? <p><Link>Calendar</Link></p>
-                                : <p><Link to="sign-in">Sign In</Link></p>
+                            loggedIn ? <p><Link  to="/calendar">Calendar</Link></p>
+                                : <p><Link to="/sign-in">Sign In</Link></p>
                         }
                     </div>
                     <div>
                         {
                             loggedIn ? <p><Link>Collobrations</Link></p>
-                                : <p><button className="sign-up-button"><Link to="sign-up">Get Started</Link></button></p>
+                                : <p><button className="sign-up-button"><Link to="/sign-up">Get Started</Link></button></p>
                         }
                     </div>
                     <div>
@@ -41,7 +40,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <Hamburger hamburgerClick={hamburgerClick} sethamburgerClick={sethamburgerClick} />
-            </div>
+            </section>
         </>
     )
 }

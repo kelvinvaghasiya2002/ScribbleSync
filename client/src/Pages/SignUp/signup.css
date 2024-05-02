@@ -1,0 +1,310 @@
+.signUp-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+
+
+#signUp-form {
+    width: 25vw;
+}
+
+
+
+.signUp-container p,
+label,
+input {
+    font-family: "Roboto", sans-serif !important;
+}
+
+
+
+#signUp-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.signup-heading {
+    margin-bottom: 6vh;
+}
+
+.signup-heading h1 {
+    font-family: "Bellefair", serif;
+    text-align: center;
+}
+
+
+
+
+
+
+/*--------------  styling for signup with google button --------------- */
+
+
+.signup-with-google button {
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    gap: 4vw;
+    width: 24vw;
+    background-color: #d8d4c8;
+    border: 0.15vw solid #2d3142;
+    border-radius: 0.55vw;
+    padding-left: 1vw;
+    cursor: pointer;
+}
+
+
+.signup-with-google button p {
+    font-weight: 400;
+    letter-spacing: 0.001vw;
+    color: #2d3142;
+}
+
+
+
+.signup-with-google button img {
+    height: 50%;
+}
+
+
+
+
+
+/* -------------- OR ------------------- */
+
+
+
+.continue-with {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0;
+    width: 100%;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #2d3142;
+    opacity: 0.3;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .75em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .75em;
+}
+
+
+
+
+
+/* ------------ INPUT FEILDS AND LABELS -------------- */
+
+
+
+
+
+
+.form-signup-inputs label {
+    font-size: 1.1vw;
+    color: #2d3142;
+    font-weight: 400;
+    letter-spacing: -0.01vw;
+}
+
+
+
+
+.form-signup-inputs input {
+    height: 6.5vh;
+    border: none;
+    width: 22vw;
+    margin: 2vh 0;
+    background-color: #d8d4c8;
+    border: 0.15vw solid #2d3142;
+    border-radius: 0.55vw;
+    padding: 0 1vw;
+}
+
+
+
+.form-signup-inputs input:focus {
+    outline-style: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.form-signup-inputs input::placeholder {
+    opacity: 0.4;
+}
+
+
+
+
+
+
+
+/* ------------- SIGN IN BUTTON -------------- */
+
+
+
+
+
+.signup-button button {
+    height: 7vh;
+    width: 24vw;
+    margin: 2vh 0;
+    background-color: #2d3142;
+    border: none;
+    border-radius: 0.55vw;
+    color: #d8d4c8;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif !important;
+}
+
+
+
+
+
+.dont-have-an-accnt {
+    margin-top: 2vh;
+}
+
+
+
+.dont-have-an-accnt p {
+    font-weight: 400;
+    /* font-size: 1.1vw; */
+}
+
+
+
+.dont-have-an-accnt p a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    #signUp-form {
+        width: 85vw;
+    }
+
+
+    /* --------------- sign in with google button ------------- */
+
+
+
+
+
+    .signup-with-google button {
+        width: 85vw;
+        border: 0.5vw solid #2d3142;
+        border-radius: 2.5vw;
+        padding-left: 5vw;
+        gap: 9vw;
+    }
+
+    /* --------------- OR ----------------- */
+
+
+    .separator {
+        width: 100%;
+    }
+
+
+    /* -------------- INPUT FIELS AND LABELS -------------- */
+
+
+
+
+    .form-signup-inputs input {
+        width: 80vw;
+        border-radius: 2.5vw;
+        border: 0.5vw solid #2d3142;
+        padding: 0 2vw;
+    }
+
+    .form-signup-inputs label {
+        font-size: 3.5vw;
+    }
+
+
+
+
+    /* ---------------------   SIGNIN BUTTON ------------------ */
+
+
+
+    .signup-button button {
+        width: 85vw;
+        border-radius: 2.5vw;
+    }
+
+
+}
+
+
+
+
+
+/* -------------------CSS FOR LOADING ANIMATIONS IN BUTTONS------------------- */
+
+
+
+
+.parent-loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    color: #d8d4c8;
+    width: 1%;
+    height: 1%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+    transform: translateX(-38px);
+    animation: l21 .5s infinite alternate linear;
+}
+
+@keyframes l21 {
+    50% {
+        box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px
+    }
+
+    100% {
+        box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px
+    }
+}

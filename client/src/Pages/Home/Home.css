@@ -1,0 +1,13 @@
+#landing-page{
+    height: 87vh;
+    background-color: #b5ad97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-page-header{
+    height: 70vh;
+    width: 70%;
+    background-color : aliceblue;
+}

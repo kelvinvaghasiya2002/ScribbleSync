@@ -242,14 +242,14 @@
 /* -------------------------------   MEDIA QUERIES  ------------------------------- */
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .hamburger-menu {
         width: 50vw;
     }
 }
 
 
-@media screen and (min-width : 401px) and (max-width: 768px) {
+@media screen and (min-width : 451px) and (max-width: 768px) {
     .hamburger-menu {
         width: 30vw;
     }
