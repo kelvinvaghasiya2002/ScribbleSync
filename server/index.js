@@ -9,6 +9,7 @@ import "./controllers/passportAuth/passportStrategy.js"
 import passport from "passport";
 import session from "express-session";
 import passportRouters from "./routes/Auth/passportRoutes.js"
+import todorouter from "./routes/todos/todo.route.js";
 const client = process.env.CLIENT_URL;
 
 
@@ -25,7 +26,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-        maxAge: 1000 * 60 * 3600 
+        maxAge: 1000 * 60 * 3600
     }
 }))
 
@@ -45,6 +46,7 @@ app.use(passport.session());
 app.use(authRouter);
 app.use(otpRouter);
 app.use(passportRouters);
+app.use(todorouter);
 
 app.get("/", (req, res) => {
     res.json({

@@ -1,0 +1,87 @@
+.todo-container {
+    background-color: #cec8b9;
+    width: 30vw;
+    border-radius: 3vw;
+    padding: 1.5vw;
+    min-height: 30vw;
+}
+
+
+.date {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight : 500;
+    color : #2d3142
+}
+
+
+
+
+
+/* ---------------------- CSS FOR INPUT TAG AND PLUS ICON ------------------------- */
+
+
+
+
+.text-area{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.to-do input{
+    width: 80%;
+    margin-top: 3vh;
+    border: none;
+    outline: none;
+    background-color: #cec8b9;
+    height: 10vh;
+    font-size: 1.5vw;
+}
+
+
+
+.add-icon{
+    margin-top: 2.3vh;
+    /* border : 1px solid; */
+    height: 9.6vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 1vh;
+}
+
+
+.plus{
+    transform: scale(1.2);
+}
+
+
+
+
+/* --------------------- CSS FOR TODO ITEMS ----------------------- */
+
+
+
+.item-container{
+    margin-top: 3vh;
+}
+
+.todo-items{
+    margin: 3vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.todo-items-i{
+    width: 26vw;
+    display: flex;
+    gap: 2vw;
+}
+
+
+.check-boxes , .delete-icon{
+    cursor: pointer;
+}

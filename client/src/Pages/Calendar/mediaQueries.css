@@ -1,0 +1,57 @@
+@media screen and (max-width: 930px) {
+    .calendar-container {
+        display: block;
+        padding: 5vw 2vw;
+    }
+
+    .react-calendar {
+        width: 100vw;
+        background: #d8d4c8;
+        /* border: 1px solid #a0a096; */
+        font-family: "Poppins", sans-serif;
+        line-height: 1.3em;
+        font-size: 3vw;
+        color: #3f424f;
+    }
+
+    .react-calendar button {
+        font-size: 4vw;
+    }
+
+    .react-calendar__month-view__weekdays{
+        font-size: 3.2vw;
+    }
+
+
+    .react-calendar__navigation button.react-calendar__navigation__label{
+        border-radius: 9vw;
+    }
+
+
+
+
+
+    
+    .todo-container-1{
+        margin-top: 5vh;
+        width: 97vw;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .todo-container{
+        width: 80vw;
+        min-height: 70vw;
+        padding: 5vw;
+    }
+
+    .plus{
+        transform: scale(0.8);
+    }
+
+    .to-do input{
+        font-size: 4vw;
+    }
+}
