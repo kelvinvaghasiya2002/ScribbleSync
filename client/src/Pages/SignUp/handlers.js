@@ -32,13 +32,13 @@ export const handleGetOtp = async (e, user, setgetOTP, setLoading) => {
     if (emailValidation(user.email) && usernameValidation(user.username)) {
         try {
             console.log("Hello World");
-            const { data } = await axios.post(`${server}/getotp`, {}, {
+            const response = await axios.post(`${server}/getotp`, {}, {
                 headers: {
                     email: user.email
                 }
             })
 
-            alert(data.success);
+            alert(response.data.success);
             setgetOTP(true)
             button.removeAttribute("disabled");
             setLoading(false)
