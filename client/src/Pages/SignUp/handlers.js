@@ -74,13 +74,14 @@ export const handleSubmitOtp = async (event, user, OTP, setgetOTP, setverifyOTP 
 
     setLoading(true);
     try {
-        const { data } = await axios.get(`${server}/verifyotp`, {
+        const response = await axios.get(`${server}/verifyotp`, {
             headers: {
                 email: user.email,
                 otp: OTP
             }
         })
-        alert(data.success);
+        console.log(response);
+        alert(response.data.success);
         setverifyOTP(true);
         setLoading(false)
         button.removeAttribute("disabled");
