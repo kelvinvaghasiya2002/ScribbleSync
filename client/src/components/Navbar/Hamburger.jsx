@@ -31,7 +31,7 @@ export default function Hamburger({ hamburgerClick, sethamburgerClick }) {
                     loggedIn ?
                         <>
                             <div style={{ width: "20vw" }}><EventNoteIcon /></div>
-                            <div><Link><p>Calendar</p></Link></div>
+                            <div><Link to="/calendar"><p>Calendar</p></Link></div>
                         </> :
                         <>
 
