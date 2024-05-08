@@ -26,7 +26,8 @@ export default function App() {
                 console.log(error);
                 try {
                     const response = await axios.get(`${server}/login/success`,
-                        // { withCredentials: true }
+                        { withCredentials: true },
+                        {credentials: 'include'}
                     );
                     console.log(response.data);
                     setContextUser(response.data.user);
