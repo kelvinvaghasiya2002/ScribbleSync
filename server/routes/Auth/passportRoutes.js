@@ -13,7 +13,7 @@ router.get("/login/failure",(req,res)=>{
 
 
 router.get("/login/success",(req,res)=>{
-    // console.log(req.user);
+    console.log(req.user);
     if(req.user){
         res.status(200).json({
             success : "you are authorized!",
