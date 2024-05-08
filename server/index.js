@@ -39,7 +39,8 @@ app.use(session({
     }
 }))
 
-
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
@@ -48,8 +49,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log(error);
 })
 
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 
 app.use(authRouter);
