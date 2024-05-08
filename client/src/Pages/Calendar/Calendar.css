@@ -201,4 +201,9 @@ abbr[title] {
 }
 
 
+.react-calendar__navigation__arrow{
+  font-size: 2vw !important; 
+}
+
+
 
