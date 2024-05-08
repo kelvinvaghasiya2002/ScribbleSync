@@ -64,6 +64,10 @@
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #734928;
+
 }
 
 /* .react-calendar__navigation button:disabled {
