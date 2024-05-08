@@ -2,9 +2,17 @@ import otpGen from "otp-generator";
 import { Otp } from "../../models/otp.js";
 import nodemailer from "nodemailer"
 import 'dotenv/config'
+import bodyParser from "body-parser";
+import express from "express";
+const app = express();
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 export const getOtp = (req, res) => {
+    console.log("heel"+req.body);
     const {email} = req.headers;
     // console.log(email);
     const otp = otpGen.generate(6, { upperCaseAlphabets: false, specialChars: false, lowerCaseAlphabets: false });

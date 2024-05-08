@@ -23,9 +23,9 @@ const client = process.env.CLIENT_URL;
 
 
 app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', [`${client}`]);
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, email");
+    res.setHeader('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, email , token , otp, data , password , username , item , todo_date , id");
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });

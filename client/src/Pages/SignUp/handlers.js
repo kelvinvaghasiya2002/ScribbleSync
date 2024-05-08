@@ -32,7 +32,8 @@ export const handleGetOtp = async (e, user, setgetOTP, setLoading) => {
     if (emailValidation(user.email) && usernameValidation(user.username)) {
         try {
             console.log("Hello World");
-            const response = await axios.post(`${server}/getotp`, {}, {
+            const user_id="123";
+            const response = await axios.post(`${server}/getotp`, {msg : "Hello"}, {
                 headers: {
                     email: user.email
                 }
