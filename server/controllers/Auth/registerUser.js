@@ -31,7 +31,7 @@ export const registerUser = (req, res) => {
                 const token = jwt.sign({
                     username: username,
                     email: email
-                }, process.env.JWT_SECRET, { expiresIn: '5m' });
+                }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
                 newUser.save().then(() => {
                     res.status(200).json({
