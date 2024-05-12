@@ -15,7 +15,6 @@ import { handleSubmit, handleCheckBoxClick, handleDeletion } from './handlers.js
 
 function CalendarComp() {
   const { ContextUser } = useUserInfo();
-  // console.log(ContextUser);
   const [date, changeDate] = useState(new Date());
   const [todoItem, setTodoItem] = useState("");
   const [listItems, setListItems] = useState([]);

@@ -31,10 +31,7 @@ export default function Home() {
         <>
             <Navbar />
             <div id="blurer"></div>
-            {/* <div ref={noteRef} style={{display : composeNote ? "block" : "none"}}> */}
-                <ComposeNote composeNote={composeNote} noteRef={noteRef} />
-            {/* </div> */}
-
+            <ComposeNote composeNote={composeNote} noteRef={noteRef} />
             <div className='parent-note-icon' onClick={handleNoteIconClick} >
                 <EditOutlinedIcon style={{ color: "#d8d4c8" }} />
             </div>
