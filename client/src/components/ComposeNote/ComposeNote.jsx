@@ -1,25 +1,12 @@
 import "./ComposeNote.css"
 import React, { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
+import useComposeNote from "../../hooks/useComposeNote";
 
 function ComposeNote({composeNote , noteRef}) {
-    const [Note, setNote] = useState({
-        title: "",
-        content: ""
-    });
-    // console.log(Note);
+    const { Note , setNote ,handleNoteChange} = useComposeNote();
 
-    const handleNoteChange = (event) => {
-        setNote((prevValue) => {
-            return (
-                {
-                    ...prevValue,
-                    [event.target.name]: event.target.value
-                }
-            )
-        })
-    }
-
+    console.log(Note);
 
     return (
         <div ref={noteRef} style={{display : composeNote ? "block" : "none"}} className="scale-in-br" id="Note-Pop-up">

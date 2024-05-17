@@ -7,41 +7,24 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import DeleteIcon from '@mui/icons-material/Delete';
-import axios from "axios"
 import { useUserInfo } from '../../contexts/user';
-const server = import.meta.env.VITE_SERVER;
+import useToDoChange from '../../hooks/useToDoChange.js';
+
+
 
 import { handleSubmit, handleCheckBoxClick, handleDeletion } from './handlers.js';
+import useDateChange from '../../hooks/useDateChange.js';
 
 function CalendarComp() {
-  const { ContextUser } = useUserInfo();
-  const [date, changeDate] = useState(new Date());
-  const [todoItem, setTodoItem] = useState("");
   const [listItems, setListItems] = useState([]);
+  const {
+    todoItem,
+    handleTodoChange,
+    setTodoItem } = useToDoChange();
+
+  const { date, handleDateChange } = useDateChange(setListItems);
+  const { ContextUser } = useUserInfo();
   console.log(listItems);
-
-
-  function handleTodoChange(event) {
-    setTodoItem(event.target.value)
-  }
-
-
-  const handleDateChange = async (val) => {
-    try {
-      const response = await axios.get(`${server}/getitems`, {
-        headers: {
-          email: ContextUser.email,
-          data: val.toDateString()
-        }
-      })
-      console.log(response.data.result);
-      setListItems(response.data.result)
-    } catch (error) {
-      console.log(error);
-    }
-    changeDate(val);
-  }
-
 
   return (
     <>

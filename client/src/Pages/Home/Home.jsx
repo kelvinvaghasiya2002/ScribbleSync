@@ -3,7 +3,8 @@ import "./Home.css"
 import "./NoteIcon.css"
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import ComposeNote from "../../components/ComposeNote/ComposeNote.jsx";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import useDetectOuterClick from "../../hooks/useDetectOuterClick.js";
 
 export default function Home() {
     const [composeNote, setComposeNote] = useState(false);
@@ -14,18 +15,9 @@ export default function Home() {
         document.getElementById("blurer").style.display = "block"
     }
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (!noteRef.current.contains(event.target)) {
-                setComposeNote(false);
-                document.getElementById("blurer").style.display = "none"
-            }
-        };
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
+
+
+    useDetectOuterClick(noteRef, "ComposeNote" , setComposeNote);
 
     return (
         <>
@@ -33,7 +25,7 @@ export default function Home() {
             <div id="blurer"></div>
             <ComposeNote composeNote={composeNote} noteRef={noteRef} />
             <div className='parent-note-icon' onClick={handleNoteIconClick} >
-                <EditOutlinedIcon style={{ color: "#d8d4c8" }} />
+                <EditOutlinedIcon className="note-icon" />
             </div>
         </>
     )
